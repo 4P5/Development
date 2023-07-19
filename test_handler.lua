@@ -21,7 +21,7 @@ for api, tests in pairs(unit_tests) do
             log("§b§l[DEV] §2— §7" .. test.name .. " §2passed")
         else
             log("§b§l[DEV] §c— §7" .. test.name .. " §cfailed")
-            log("§b§l[DEV] §c—— §cExpected: §7" .. expected)
+            log("§b§l[DEV] §c—— §cExpected: §7" .. tostring(expected))
             log("§b§l[DEV] §c—— §cGot: §7" .. tostring(result))
         end
     end
