@@ -1,11 +1,11 @@
 {
   "name": "Development",
-  "description": "Tests for *everything*",
+  "description": "Tests *everything*",
   "authors": [
-    ""
+    "4P5"
   ],
   "color": "#a672ef",
-  "auto_scripts": [
-    "test_handler"
+  "autoScripts": [
+    "script"
   ]
 }
