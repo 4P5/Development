@@ -1,0 +1,1 @@
+return world:exists(), true
