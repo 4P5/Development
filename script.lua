@@ -1,4 +1,11 @@
-function events.ENTITY_INIT()
+vanilla_model.PLAYER:setVisible(false)
+
+local main_page = action_wheel:newPage()
+action_wheel:setPage(main_page)
+main_page:newAction():title("Setup Test Area"):item("stone"):onLeftClick(function ()
     require("test_setup")
+    require("player_setup")
+end)
+main_page:newAction():title("Run Unit Tests"):item("command_block"):onLeftClick(function ()
     require("test_handler")
-end
+end)
