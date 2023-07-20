@@ -1,7 +1,3 @@
--- player
-host:sendChatCommand("execute in minecraft:overworld run tp @s 100 101 100 0 0")
-host:sendChatCommand("effect clear")
-
 -- test area
 host:sendChatCommand("execute positioned 100 100 100 run fill ~-32 ~-24 ~-32 ~32 ~-16 ~32 minecraft:air")
 host:sendChatCommand("execute positioned 100 100 100 run fill ~-32 ~-16 ~-32 ~32 ~-8 ~32 minecraft:air")
