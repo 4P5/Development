@@ -1,7 +1,7 @@
 -- Registers unit tests from the `tests` directory.
 local unit_tests = {}
 local n_tests = 0
-logJson("\n\n\n§b§l[DEV] §eLoading tests\n")
+logSummary("\n\n\n§b§l[DEV] §eLoading tests\n")
 for _, path in pairs(listFiles("tests", true)) do
     local api, name = path:gsub("tests.",""):gsub(".lua",""):match("(.*)%.(.*)")
     unit_tests[api] = unit_tests[api] or {}
@@ -12,18 +12,38 @@ for _, path in pairs(listFiles("tests", true)) do
     n_tests = n_tests + 1
 end
 
-logJson("§b§l[DEV] §eFound §b" .. n_tests .. " §etests\n")
+local function stringify(variable)
+    if type(variable) == "table" then
+        return tostring(table.concat(variable, ", "))
+    else
+        return tostring(variable)
+    end
+end
+
+logSummary("§b§l[DEV] §eFound §b" .. n_tests .. " §etests\n")
+local tests_passed = 0
+local tests_failed = 0
 for api, tests in pairs(unit_tests) do
-    logJson("§b§l[DEV] §eRunning tests for §b" .. api .. "\n")
+    logDefault("§b§l[DEV] §eRunning tests for §b" .. api .. "\n")
     for i, test in pairs(tests) do
         local result, expected = require(test.path)
+        logEverything("§b§l[DEV] §eExpected (" .. type(expected) .. "): §7§o", expected)
+        logEverything("§b§l[DEV] §eResult (" .. type(result) .. "): §7§o", result)
+        result = stringify(result)
+        expected = stringify(expected)
         if result == expected then
-            logJson("§b§l[DEV] §2— §7" .. test.name .. " §2passed\n")
+            tests_passed = tests_passed + 1
+            logDefault("§b§l[DEV] §2— §7" .. test.name .. " §2passed\n")
+            logVerbose("§b§l[DEV] §2—— Expected: §7§o" .. tostring(expected) .. "\n")
+            logVerbose("§b§l[DEV] §2—— Got: §7§o" .. tostring(result) .. "\n")
         else
-            logJson("§b§l[DEV] §c— §7" .. test.name .. " §cfailed\n")
-            logJson("§b§l[DEV] §c—— §cExpected: §7" .. tostring(expected) .. "\n")
-            logJson("§b§l[DEV] §c—— §cGot: §7" .. tostring(result) .. "\n")
+            tests_failed = tests_failed + 1
+            logDefault("§b§l[DEV] §c— §7" .. test.name .. " §cfailed\n")
+            logDefault("§b§l[DEV] §c—— Expected: §7§o" .. tostring(expected) .. "\n")
+            logDefault("§b§l[DEV] §c—— Got: §7§o" .. tostring(result) .. "\n")
         end
     end
 end
-logJson("§b§l[DEV] §eFinished testing!\n\n\n")
+logSummary("§b§l[DEV] §eFinished §b" .. n_tests .. " §etests\n")
+logSummary("§b§l[DEV] §a—— Passed: §b" .. tests_passed .. "\n")
+logSummary("§b§l[DEV] §c—— Failed: §b" .. tests_failed .. "\n")
