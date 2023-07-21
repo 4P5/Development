@@ -1,0 +1,1 @@
+return MAGMA_BLOCK:hasEmissiveLighting(), true

@@ -1,0 +1,1 @@
+return SIGN:getEntityData().front_text.messages[1], '{"text":"Test"}'

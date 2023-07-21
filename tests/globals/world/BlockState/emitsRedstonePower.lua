@@ -1,0 +1,1 @@
+return REDSTONE_BLOCK:emitsRedstonePower(), true

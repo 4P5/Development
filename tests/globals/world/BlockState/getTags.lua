@@ -1,0 +1,1 @@
+return OAK_STAIRS:getTags()[1], "minecraft:stairs"

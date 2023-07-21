@@ -1,0 +1,1 @@
+return BEDROCK:getPos(), vec(105,101,104)

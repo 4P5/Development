@@ -1,0 +1,1 @@
+return HONEY_BLOCK:getSounds().hit, "minecraft:block.honey_block.hit"

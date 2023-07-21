@@ -1,0 +1,1 @@
+return BEDROCK.id, "minecraft:bedrock"

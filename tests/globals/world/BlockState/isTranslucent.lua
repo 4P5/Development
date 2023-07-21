@@ -1,0 +1,1 @@
+return CAKE:isTranslucent(), true

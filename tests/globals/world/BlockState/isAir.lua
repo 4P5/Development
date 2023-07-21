@@ -1,0 +1,1 @@
+return CAVE_AIR:isAir(), true

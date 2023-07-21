@@ -1,0 +1,1 @@
+return HONEY_BLOCK:isOpaque(), false

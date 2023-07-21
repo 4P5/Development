@@ -1,0 +1,1 @@
+return BLUE_ICE:getFriction(), 0.989

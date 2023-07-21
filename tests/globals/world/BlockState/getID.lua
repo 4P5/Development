@@ -1,0 +1,1 @@
+return REDSTONE_BLOCK:getID(), "minecraft:redstone_block"

@@ -1,0 +1,1 @@
+return CAKE:toStateString(), "minecraft:cake[bites=3]{}"

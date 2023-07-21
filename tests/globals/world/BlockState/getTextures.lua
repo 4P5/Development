@@ -1,0 +1,1 @@
+return GRASS_BLOCK:getTextures().WEST[2], "minecraft:textures/block/grass_block_side_overlay"

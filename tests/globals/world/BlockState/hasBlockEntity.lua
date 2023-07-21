@@ -1,0 +1,1 @@
+return SIGN:hasBlockEntity(), true

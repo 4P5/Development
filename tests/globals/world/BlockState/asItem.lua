@@ -1,0 +1,1 @@
+return BEDROCK:asItem().id, "minecraft:bedrock" 

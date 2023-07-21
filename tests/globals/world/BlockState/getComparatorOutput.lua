@@ -1,0 +1,1 @@
+return CAKE:getComparatorOutput(), 8

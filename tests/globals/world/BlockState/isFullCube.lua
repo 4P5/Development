@@ -1,0 +1,1 @@
+return HONEY_BLOCK:isFullCube(), false

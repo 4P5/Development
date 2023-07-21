@@ -1,0 +1,1 @@
+return REDSTONE_BLOCK:getMapColor(), vec(1,0,0)

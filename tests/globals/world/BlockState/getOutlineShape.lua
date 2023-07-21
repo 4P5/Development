@@ -1,0 +1,1 @@
+return OAK_STAIRS:getCollisionShape()[1][1], vec(0.5,0,0)
