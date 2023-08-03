@@ -1,0 +1,1 @@
+return SEEDS:getBlockstate().id, "minecraft:wheat"

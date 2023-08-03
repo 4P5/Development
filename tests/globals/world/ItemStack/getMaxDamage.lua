@@ -1,0 +1,1 @@
+return ELYTRA:getMaxDamage(), 432

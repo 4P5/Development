@@ -1,0 +1,1 @@
+return ELYTRA:getRarity(), "RARE"

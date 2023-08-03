@@ -1,0 +1,1 @@
+return IRON_LEGGINGS:getEquipmentSlot(), "LEGS"
