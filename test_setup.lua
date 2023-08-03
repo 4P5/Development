@@ -7,7 +7,11 @@ host:sendChatCommand("execute positioned 100 100 100 run fill ~-29 ~8 ~-29 ~29 ~
 host:sendChatCommand("execute positioned 100 100 100 run fill ~-29 ~16 ~-29 ~29 ~24 ~29 minecraft:air")
 
 host:sendChatCommand("execute positioned 100 100 100 run fill ~-16 ~-1 ~-16 ~16 ~0 ~16 minecraft:stone")
+
 host:sendChatCommand("execute positioned 100 100 100 run fillbiome ~-16 ~-8 ~-16 ~16 ~8 ~16 minecraft:old_growth_birch_forest")
+host:sendChatCommand("execute in minecraft:overworld run tp @s 100 101 1000 0 0")
+host:sendChatCommand("execute in minecraft:overworld run tp @s 100 101 100 0 0") -- teleport away and back to reload the biome
+
 
 host:sendChatCommand("fill 100 101 100 100 319 100 air") -- skylight access
 
@@ -17,7 +21,7 @@ host:sendChatCommand("setblock 105 101 105 minecraft:light")
 host:sendChatCommand("setblock 105 101 104 minecraft:bedrock")
 host:sendChatCommand("setblock 105 101 103 minecraft:redstone_block")
 host:sendChatCommand("setblock 105 101 102 minecraft:oak_stairs[facing=east,half=top,shape=outer_left]")
-host:sendChatCommand("setblock 105 101 101 minecraft:oak_sign[rotation=4]{back_text:{color:\"black\",has_glowing_text:0b,messages:['{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']},front_text:{color:\"black\",has_glowing_text:0b,messages:['{\"text\":\"Test\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']},is_waxed:0b}")
+host:sendChatCommand("setblock 105 101 101 minecraft:oak_sign[rotation=4]{back_text:{color:\"black\",messages:['{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']},front_text:{color:\"black\",messages:['{\"text\":\"Test\"}','{\"text\":\"\"}','{\"text\":\"\"}','{\"text\":\"\"}']}}")
 host:sendChatCommand("setblock 105 100 100 minecraft:water")
 host:sendChatCommand("setblock 105 101 99 minecraft:blue_ice")
 host:sendChatCommand("setblock 105 101 98 minecraft:cake[bites=3]")
@@ -35,6 +39,10 @@ host:sendChatCommand("weather clear")
 -- entities
 host:sendChatCommand("summon cow 100 102 104 {NoAI:1b,UUID:[I;1,2,3,4],Silent:1b}")
 
+-- particles
+FLAME = particles["flame"]:pos(101,101,101.123):lifetime(9995):color(0.5,0.6,0.7):velocity(0.1,0.1,0.1):spawn()
+BUBBLE = particles["bubble"]:spawn()
+
 -- globals
 CAVE_AIR = world.getBlockState(105,101,106)
 LIGHT = world.getBlockState(105,101,105)
@@ -50,6 +58,9 @@ SEA_LANTERN = world.getBlockState(105,101,96)
 GRASS_BLOCK = world.getBlockState(105,101,95)
 MAGMA_BLOCK = world.getBlockState(105,101,94)
 
+BIRCH_FOREST = world.getBiome(100,100,100)
+
 COW = world.getEntity("00000001-0000-0002-0000-000300000004")
 
+require("test_area")
 
