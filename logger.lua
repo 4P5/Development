@@ -1,4 +1,15 @@
 
+local clipboard_string = ""
+function logClipboard(...)
+    for i, v in ipairs({...}) do
+        clipboard_string = clipboard_string .. v
+    end
+end
+
+function finaliseClipboard()
+    host:setClipboard(clipboard_string)
+    host:setActionbar("§b§l[DEV] §eCopied report to clipboard")
+end
 
 function logSummary(...)
     if LOG_VERBOSITY >= 0 then
