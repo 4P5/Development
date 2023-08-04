@@ -1,0 +1,1 @@
+return DIAMOND_SWORD:getRepairCost(), 200

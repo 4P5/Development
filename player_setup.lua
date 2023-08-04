@@ -10,7 +10,7 @@ host:setSlot(5, "iron_leggings")
 host:setSlot(6, "iron_boots")
 host:setSlot(7, "dried_kelp")
 host:setSlot(8, "egg")
-host:setSlot(9, "diamond_sword")
+host:setSlot(9, "diamond_sword{RepairCost:200}")
 host:setSlot(10, "wheat_seeds")
 
 STICKS = host:getSlot(0)
