@@ -1,0 +1,1 @@
+return BIRCH_FOREST:getDownfall(), 0.6

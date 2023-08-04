@@ -1,0 +1,1 @@
+return BIRCH_FOREST:setPos():getPos(), vec(0,0,0)

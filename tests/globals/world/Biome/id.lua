@@ -1,0 +1,1 @@
+return BIRCH_FOREST.id, "minecraft:old_growth_birch_forest"

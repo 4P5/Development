@@ -1,0 +1,1 @@
+return BIRCH_FOREST:getTemperature(), 0.6

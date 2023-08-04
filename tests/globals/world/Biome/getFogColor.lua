@@ -1,0 +1,1 @@
+return BIRCH_FOREST:getFogColor(), vec(0.75294, 0.84705, 1)

@@ -1,0 +1,1 @@
+return BIRCH_FOREST:getWaterFogColor(), vec(0.0196, 0.0196, 0.2)

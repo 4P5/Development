@@ -1,0 +1,1 @@
+return BIRCH_FOREST:getSkyColor(), vec(0.47843, 0.64705, 1)

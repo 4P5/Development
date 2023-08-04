@@ -1,0 +1,1 @@
+return BIRCH_FOREST:getFoliageColor(), vec(0.4196, 0.66274, 0.25098)
