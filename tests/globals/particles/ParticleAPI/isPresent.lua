@@ -1,0 +1,1 @@
+return particles:isPresent("end_rod"), true

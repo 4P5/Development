@@ -1,0 +1,1 @@
+return particles:newParticle("block stone", 100, 101, 101, 0, 0.5, 0):lifetime(9999):isAlive(), true
