@@ -1,4 +1,3 @@
-require("test_setup")
 -- Registers unit tests from the `tests` directory.
 local unit_tests = {}
 local n_tests = 0
@@ -57,7 +56,7 @@ for api, tests in pairs(unit_tests) do
             logDefault("§b§l[DEV] §c—— Got: §7§o" .. stringify(result) .. "\n")
             
             logClipboard("├──FAIL──" .. api_short .. ":" .. test.name .. "\n")
-            logClipboard("│  ├──Expected: (" .. type(expected) .. ") " .. tostring(expected) .. "\n")
+            logClipboard("│  ├──Expected: (" .. type(expected) .. ") " .. stringify(expected) .. "\n")
             if i == #tests then
                 logClipboard("└──└──Got:      (" .. type(result) .. ") " .. stringify(result) .. "\n")
             else
